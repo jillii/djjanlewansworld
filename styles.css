@@ -24,7 +24,7 @@ div {
 }
 
 section {
-    padding: 51px 0;
+    padding: 120px 0;
 }
 .fade-down {
     opacity: 0;
@@ -64,7 +64,7 @@ section {
 }
 
 #videos {
-    margin: 91px 0;
+    margin: 102px 0;
 }
 
 iframe {
@@ -99,5 +99,18 @@ iframe {
     to {
         opacity: 1;
         transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 44px 0;
+    }
+    .pull-right,
+    .pull-left {
+        text-align: center;
+    }
+    .caption {
+        position: relative;
     }
 }
