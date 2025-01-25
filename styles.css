@@ -1,0 +1,103 @@
+body {
+    position: relative;
+    margin: 0;
+    font-family: monospace;
+    font-size: 17px;
+    line-height: 1.5;
+    letter-spacing: .8px;
+    text-align: center;
+    overflow: auto;
+}
+body:after {
+    content: '';
+    background-image: url(images/sailor-moon.webp);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+section {
+    padding: 51px 0;
+}
+.fade-down {
+    opacity: 0;
+    animation: fade-down .5s linear forwards;
+}
+.window {
+    position: relative;
+    padding: 4px 6px;
+    border: 2px solid;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.window:before {
+    content: attr(data-title);
+    position: absolute;
+    left: -2px;
+    bottom: 100%;
+    width: calc(100% - 12px);
+    height: 22px;
+    padding: 4px 6px;
+    font-size: 14px;
+    font-weight: 800;
+    border: 2px solid;
+}
+
+.site-container {
+    max-width: 1400px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.narrow {
+    max-width: 700px;
+}
+
+#videos {
+    margin: 91px 0;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+.video-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.caption {
+    position: absolute;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+}
+
+.pull-left {
+    text-align: left;
+}
+.pull-right {
+    text-align: right;
+}
+
+
+@keyframes fade-down {
+    from {
+        opacity: 0;
+        transform: translateY(-50px)
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
